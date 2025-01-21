@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}<div class="home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url({% static 'img/about.jpg' %});"></div>
+<div class="col about-header">
+    <h1>DEPARTMENTS</h1>
+</div>
+<div class="mt-5">
+    <div class="container">
+        <div>
+            <ul class="service-list">
+                <li><a href="#" onclick="showInfo('homeopathy')">HOMEOPATHY</a></li>
+                <li><a href="#" onclick="showInfo('dentistry')">DENTISTRY</a></li>
+                <li><a href="#" onclick="showInfo('yoga')">YOGA & MEDITATION</a></li>
+                <li><a href="#" onclick="showInfo('psychology')">PSYCHOLOGY</a></li>
+                <li><a href="#" onclick="showInfo('wellness')">WELLNESS</a></li>
+            </ul>
+        </div>
+        <div id="info" class="info-section mt-4">
+            <!-- Information will be displayed here -->
+        </div>
+    </div>
+</div>
+
+<script> <!-- script to display dep details-->
+    function showInfo(department) {
+        const infoSection = document.getElementById('info');
+        let content = '';
+
+        switch (department) {
+            case 'homeopathy':
+                content = '<h2>Homeopathy</h2><p><br>Can correct any present anomalies immediately<br><br>Can advise them regarding healthy ways of living<br><br>Can foresee complications and prevent them<br><br>Can cut short expenses for treatment drastically by constant vigil and preventive measures.<br><br>Can mitigate side effects significantly<br><br>Can suggest a competent reference,if needed<br><br>Can provide first aid intervention<br><br>...</p>';
+                break;
+            case 'dentistry':
+                content = '<h2>Dentistry</h2><p><br> Cosmetic Dentistry <br><br>Restorative Dentistry<br><br>Prosthodontics <br><br>Preventive Dentistry<br><br>Orthodontics<br></p>';
+                break;
+            case 'yoga':
+                content = '<h2>Yoga & Meditation</h2><p> <br>Knowing Yourself Better<br> <br>It Becomes Easier To Pursue An Education<br><br>Finding Peace With Decisions You Make<br><br>Enhance Overall Independence<br></p>';
+                break;
+            case 'psychology':
+                content = '<h2>Psychology</h2><p><br>MARITAL COUNSELING<br><br>FAMILY COUNSELING<br><br>EDUCATIONAL COUNSELING<br><br>PERSONALITY DEVELOPMENT PROGRAMMES<br><br>ADOLESCENTS COUNSELING<br><br>GERIATRIC COUNSELING<br>...</p>';
+                break;
+            case 'wellness':
+                content = '<h2>Wellness</h2><p><br>YOGA - Get Aware The Immense Potential In You<br><br>TRAINING PROGRAM - Integral Part Of Mental, Emotional And Physical Health<br><br>MEDITATION - A Sensible ResolveInformation about Wellness<br><br>TRAVELLING & ACCOMMODATION - Better To See Something Once Than Hear About It A Thousand Times<br><br>...</p>';
+                break;
+            default:
+                content = '<p>Select a department to see more information.</p>';
+        }
+
+        infoSection.innerHTML = content;
+    }
+</script>
+
+{% endblock content %}

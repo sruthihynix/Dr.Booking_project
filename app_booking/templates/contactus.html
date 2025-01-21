@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ {% load static %}
+ <!--  CONTENT -->
+<div class="map-info-container" style="display: flex; justify-content: space-around; gap: 20px; padding: 20px;">
+
+    <!-- Phone Box -->
+    <div class="map-info-phone" style="border: 1px solid #ccc; padding: 20px; width: 250px; text-align: center; background-color: #f9f9f9; border-radius: 5px;">
+        <i class="fa fa-phone" style="font-size: 24px; color: green;"></i>
+        <h4>Phone</h4>
+        <span style="font-size: 18px;">096335 58666</span>
+    </div>
+
+    <!-- Email Box -->
+    <div class="map-info-mail" style="border: 1px solid #ccc; padding: 20px; width: 250px; text-align: center; background-color: #f9f9f9; border-radius: 5px;">
+        <i class="fa fa-envelope" style="font-size: 24px; color: #007bff;"></i>
+        <h4>Email</h4>
+        <span style="font-size: 18px;">
+            <a href="mailto:info@pythrukam.org" style="text-decoration: none; color: #007bff;">info@jhrc.org</a>
+        </span>
+    </div>
+
+    <!-- Location Box -->
+    <div class="map-info-location" style="border: 1px solid #ccc; padding: 20px; width: 250px; text-align: center; background-color: #f9f9f9; border-radius: 5px;">
+        <i class="flaticon-navigation-arrow" style="font-size: 24px; color: red;"></i>
+        <h4>Location</h4>
+        <span style="font-size: 18px;">
+            SNDP Complex, <br> Perumbavoor, Ernakulam
+        </span>
+    </div>
+    <div class="map-info-location" style="border: 1px solid #ccc; padding: 20px; width: 250px; text-align: center; background-color: #f9f9f9; border-radius: 5px;">
+      <i class="flaticon-navigation-arrow" style="font-size: 24px; color: red;"></i>
+      <h4>Location</h4>
+      <span style="font-size: 18px;">
+          Janatha Complex, <br> Kalady, Ernakulam
+      </span>
+  </div>
+
+</div>
+
+{% endblock content %}

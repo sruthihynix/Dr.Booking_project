@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <div class="home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url({% static 'img/about.jpg' %});"></div>
+    <div class="col about-header">
+        <h1>DEPARTMENTS</h1>
+    </div>
+    <div class="mt-5">
+      <div class="container">
+        <div>
+
+            <div>
+                <ul class="service-list">
+                    <li><a href="#.html">HOMEOPATHY</a></li>
+                    <li><a href="#.html">DENTISTRY</a></li>
+                    <li><a href="#.html">YOGA & MEDITATION</a></li>
+                    <li><a href="#.html">PSYCHOLOGY</a></li>
+                    <li><a href="#.html">WELLNESS</a></li>
+                </ul>
+            </div>
+      </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,10 @@
+
+<!--                    <li class="nav-item"></li>-->
+<!--                        <a class="nav-link" href="{% url '#' %}" style="color: white;">MAKE AN APPOINTMENT</a>-->
+<!--                    </li>-->
+
+
+dr.login=uname=iha
+pwd=123
+
+drlogin  from doctor table is not connected

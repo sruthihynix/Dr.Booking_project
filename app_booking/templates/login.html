@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ {% load static %}
+
+
+<!--    <link rel="stylesheet" href="{% static 'styles.css' %}">-->
+
+
+</head>
+<body>
+<br>
+    <div class="parent">
+        <div class="form">
+<!--            <h1>Login Page</h1>-->
+
+            <form action="" method='POST'>
+                {% csrf_token %}
+                <label for="uname">UserName:</label>
+                <input type="text" placeholder="Enter your username" name='uname'><br>
+                <br>
+                <label for="pwd">Password:</label>
+                <input type="password" placeholder="Enter your password" name='pwd'><br>
+
+                <button type="submit">LOGIN</button>
+
+            </form>
+        </div>
+    </div>
+<br>
+
+{% endblock content %}
